@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_graph"
+    app:startDestination="@id/primeFragment">
+
+    <fragment
+        android:id="@+id/emFragment"
+        android:name="com.example.lab3copilot.EmFragment"
+        android:label="fragment_em"
+        tools:layout="@layout/fragment_em" />
+    <fragment
+        android:id="@+id/primeFragment"
+        android:name="com.example.lab3copilot.PrimeFragment"
+        android:label="fragment_prime"
+        tools:layout="@layout/fragment_prime" >
+        <action
+            android:id="@+id/action_primeFragment_to_reFragment"
+            app:destination="@id/reFragment" />
+        <action
+            android:id="@+id/action_primeFragment_to_emFragment"
+            app:destination="@id/emFragment" />
+        <action
+            android:id="@+id/action_primeFragment_to_histFragment"
+            app:destination="@id/histFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/reFragment"
+        android:name="com.example.lab3copilot.ReFragment"
+        android:label="fragment_re"
+        tools:layout="@layout/fragment_re" />
+    <fragment
+        android:id="@+id/histFragment"
+        android:name="com.example.lab3copilot.HistFragment"
+        android:label="fragment_hist"
+        tools:layout="@layout/fragment_hist" />
+</navigation>
